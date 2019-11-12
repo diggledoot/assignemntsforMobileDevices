@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/completed_view"
+        android:icon="@drawable/completed"
+        android:title="Completed Tasks"/>
+
+    <item
+        android:id="@+id/main_view"
+        android:icon="@drawable/home"
+        android:title="Home"/>
+    <item
+        android:id="@+id/overdue_view"
+        android:icon="@drawable/overdue"
+        android:title="Overdue Tasks"/>
+</menu>
