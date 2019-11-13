@@ -151,12 +151,12 @@ public class AddTask extends AppCompatActivity implements  DatePickerDialog.OnDa
         }
         //Set time
         Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(selectedDate.getTime());
+        calendar.setTimeInMillis(System.currentTimeMillis());
         calendar.set(Calendar.HOUR_OF_DAY,8);
         calendar.set(Calendar.MINUTE,0);
         calendar.set(Calendar.SECOND,0);
-
-        alarmManager.set(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),alarmIntent);
+        Log.d("message",String.valueOf(calendar.getTime()));
+        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,alarmIntent);
 
 
     }

@@ -29,23 +29,13 @@ public class MyService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        Log.d("message","onStartCommand is called");
         input = (String)intent.getExtras().get("minute");
         Log.d("message",input);
-        return super.onStartCommand(intent, flags, startId);
-    }
-
-    @Nullable
-    @Override
-    public IBinder onBind(Intent intent) {
-        return null;
-    }
-
-    @Override
-    public void onCreate() {
-        Log.d("message","Service started");
         locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
+                //Do write to database here
                 if(MainActivity.count!=0){
                     currentTime = Calendar.getInstance().getTime();
                     final SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-d HH:mm:ss");
@@ -75,9 +65,22 @@ public class MyService extends Service {
         };
         locationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
         if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            return;
+            return super.onStartCommand(intent, flags, startId);
         }
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000*10, 0, locationListener);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000*60*Integer.parseInt(input), 0, locationListener);
+
+        return super.onStartCommand(intent, flags, startId);
+    }
+
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent) {
+        return null;
+    }
+
+    @Override
+    public void onCreate() {
+        Log.d("message","Service started");
     }
 
     @Override
