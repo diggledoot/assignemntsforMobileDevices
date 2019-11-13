@@ -14,24 +14,39 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.provider.Settings;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MyService extends Service {
     private Date currentTime;
     private LocationManager locationManager;
     private LocationListener locationListener;
     private String input;
-
+    private ArrayList<String> stringArrayList;
+    private String url = "http://10.0.2.2/assignment5/insert.php";
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d("message","onStartCommand is called");
         input = (String)intent.getExtras().get("minute");
         Log.d("message",input);
+        stringArrayList= new ArrayList<>();
         locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
@@ -40,9 +55,12 @@ public class MyService extends Service {
                     currentTime = Calendar.getInstance().getTime();
                     final SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-d HH:mm:ss");
                     Log.d("message",sdf.format(currentTime)+" "+"Long: "+location.getLongitude()+"  Lat: "+location.getLatitude());
+                    //stringArrayList.add(sdf.format(currentTime)+" "+"Long: "+location.getLongitude()+"  Lat: "+location.getLatitude());
+                    insertDB(sdf.format(currentTime)+" "+"Long: "+location.getLongitude()+"  Lat: "+location.getLatitude());
                     MainActivity.count--;
                 }else{
-                    Log.d("message","Its 0");
+                    Log.d("message","Nothing anymore :D");
+
                 }
             }
 
@@ -71,7 +89,31 @@ public class MyService extends Service {
 
         return super.onStartCommand(intent, flags, startId);
     }
+    private void insertDB(final String string){
+        Log.d("inside insertDB",string);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url
+                , new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
 
+                    }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(),error.getMessage(),Toast.LENGTH_SHORT).show();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params = new HashMap<>();
+                params.put("location",string);
+                return params;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -88,6 +130,7 @@ public class MyService extends Service {
         super.onDestroy();
         Log.d("message","Service stopped");
         if(locationManager!=null){
+            stringArrayList.clear();
             locationManager.removeUpdates(locationListener);
             MainActivity.count=2;
         }

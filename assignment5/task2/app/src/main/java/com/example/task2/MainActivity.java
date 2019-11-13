@@ -19,6 +19,18 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity{
     public static int count=2;
@@ -50,11 +62,16 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 //intent pass the variable to set how long in minutes to service class
-                Intent i = new Intent(getApplicationContext(),MyService.class);
-                i.putExtra("minute",input.getText().toString());
-                startService(i);
-                start.setEnabled(false);
-                stop.setEnabled(true);
+                if(input.getText().toString().matches("")){
+                    Toast.makeText(getApplicationContext(),"Please input a duration!",Toast.LENGTH_SHORT).show();
+                }else{
+                    Intent i = new Intent(getApplicationContext(),MyService.class);
+                    i.putExtra("minute",input.getText().toString());
+                    startService(i);
+                    start.setEnabled(false);
+                    stop.setEnabled(true);
+                }
+
             }
         });
         stop.setOnClickListener(new View.OnClickListener() {
