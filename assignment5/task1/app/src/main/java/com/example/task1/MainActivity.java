@@ -33,7 +33,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements  DeleteDialog.OnFragmentInteractionListener{
-
     //Database
     public static final String DATABASE_NAME="taskDB";
     DatabaseManager databaseManager;
@@ -56,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements  DeleteDialog.OnF
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initAlarm();
         //Recycler
         initRecycler();
         //SQL
@@ -69,27 +67,6 @@ public class MainActivity extends AppCompatActivity implements  DeleteDialog.OnF
 
     }
 
-    private void initAlarm() {
-        Log.d("message","Accessed initAlarm");
-
-        alarmManager= (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        Intent intent = new Intent(this,AlarmReceiver.class);
-        alarmIntent = PendingIntent.getBroadcast(this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
-
-        if(alarmManager!=null){
-            alarmManager.cancel(alarmIntent);
-        }
-        //Set time
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(System.currentTimeMillis());
-        calendar.set(Calendar.HOUR_OF_DAY,8);
-        calendar.set(Calendar.MINUTE,0);
-        calendar.set(Calendar.SECOND,0);
-
-        alarmManager.set(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),alarmIntent);
-
-
-    }
 
     private void initNav() {
         bottomNavigationView = findViewById(R.id.main_bottom_nav);
