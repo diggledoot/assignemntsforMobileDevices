@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView_commons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/commons"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_cuisine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cuisine"
+        android:textColor="#BDBDBD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_commons" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/img"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_cuisine"
+        app:srcCompat="@drawable/commons" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03125" />
+
+    <TextView
+        android:id="@+id/textView_addressTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/addTitle"
+        android:textColor="#953E3D"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView_location"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintLeft_toRightOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/textView_addressTitle"
+        app:srcCompat="@drawable/location" />
+
+    <TextView
+        android:id="@+id/textView_addDetails"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/addDetails"
+        android:textColor="#842D36"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView_location"
+        app:layout_constraintTop_toBottomOf="@id/textView_addressTitle" />
+
+    <TextView
+        android:id="@+id/textView_openTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/openTitle"
+        android:textColor="#953E3D"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/textView_addDetails" />
+
+    <ImageView
+        android:id="@+id/imageView_clock"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="3dp"
+        android:contentDescription="@string/clock"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/textView_openTitle"
+        app:srcCompat="@drawable/clock" />
+
+    <TextView
+        android:id="@+id/textView_openDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/openDetails"
+        android:textColor="#842D36"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@id/imageView_clock"
+        app:layout_constraintTop_toBottomOf="@id/textView_openTitle" />
+
+    <LinearLayout
+        android:id="@+id/hr"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:background="#D3D3D3"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/textView_openDetails"/>
+
+    <TextView
+        android:id="@+id/textView_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/review"
+        android:textColor="#953E3D"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/hr" />
+
+    <ImageView
+        android:id="@+id/imageView_food"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/textView_review"
+        app:srcCompat="@drawable/food_icon" />
+
+    <TextView
+        android:id="@+id/textView_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/food"
+        android:textColor="#953E3D"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imageView_food"
+        app:layout_constraintTop_toBottomOf="@id/textView_review" />
+
+    <ImageView
+        android:id="@+id/imageView_rating1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/textView_food"
+        app:layout_constraintTop_toBottomOf="@id/textView_food"
+        app:srcCompat="@drawable/love3_icon" />
+
+
+    <ImageView
+        android:id="@+id/imageView_service"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/service_icon"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/imageView_rating1"/>
+
+    <TextView
+        android:id="@+id/textView_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/service"
+        android:textStyle="bold"
+        android:textColor="#953E3D"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/imageView_service"
+        app:layout_constraintTop_toBottomOf="@id/imageView_rating1"
+        />
+
+    <ImageView
+        android:id="@+id/imageView_rating2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/love5_icon"
+        app:layout_constraintTop_toBottomOf="@id/textView_service"
+        app:layout_constraintLeft_toLeftOf="@id/textView_service"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="imageView_food,textView_food,imageView_rating1,imageView_service,textView_service,imageView_rating2"
+        app:layout_constraintStart_toEndOf="@id/imageView_rating1" />
+
+    <ImageView
+        android:id="@+id/imageView_drinks"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintTop_toBottomOf="@id/textView_review"
+        app:srcCompat="@drawable/drinks_icon" />
+
+    <TextView
+        android:id="@+id/textView_drinks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/drinks"
+        android:textStyle="bold"
+        android:textColor="#953E3D"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/imageView_drinks"
+        app:layout_constraintTop_toBottomOf="@id/textView_review"/>
+
+    <ImageView
+        android:id="@+id/imageView_rating3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/love4_icon"
+        app:layout_constraintTop_toBottomOf="@id/textView_drinks"
+        app:layout_constraintLeft_toLeftOf="@id/textView_drinks"/>
+
+    <ImageView
+        android:id="@+id/imageView_ambience"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintTop_toBottomOf="@id/imageView_rating1"
+        app:srcCompat="@drawable/ambience_icon" />
+
+    <TextView
+        android:id="@+id/textView_ambience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ambience"
+        android:textStyle="bold"
+        android:textColor="#953E3D"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/imageView_ambience"
+        app:layout_constraintTop_toBottomOf="@id/imageView_rating3"/>
+
+    <ImageView
+        android:id="@+id/imageView_rating4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/love4_icon"
+        app:layout_constraintTop_toBottomOf="@id/textView_ambience"
+        app:layout_constraintLeft_toLeftOf="@id/textView_ambience"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

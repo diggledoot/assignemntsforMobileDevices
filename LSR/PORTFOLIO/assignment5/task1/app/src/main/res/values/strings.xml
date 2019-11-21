@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">task1</string>
+    <string name="addtask">Add Task</string>
+    <string name="edittask">Edit Task</string>
+    <string name="addtitle">What is to be done?</string>
+    <string name="duetitle">When is it due?</string>
+    <string name="detailtitle">Details</string>
+    <string name="important">Important</string>
+    <string name="pending">Pending</string>
+    <string name="complete">Completed</string>
+</resources>

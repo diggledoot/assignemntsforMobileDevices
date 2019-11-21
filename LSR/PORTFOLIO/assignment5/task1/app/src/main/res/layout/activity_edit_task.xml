@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditTask">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/edit_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/edittask"
+        app:titleTextColor="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:background="@color/colorPrimary">
+
+            <ImageButton
+                android:id="@+id/edit_submit"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:scaleType="fitXY"
+                android:src="@drawable/button" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/edit_edittitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addtitle"
+        android:textColor="@color/blue"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_edit"
+        app:layout_constraintTop_toBottomOf="@id/edit_toolbar"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <EditText
+        android:id="@+id/edit_editText"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/edit_edittitle"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_edit"/>
+    <TextView
+        android:id="@+id/edit_datetitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/duetitle"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/edit_editText"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_edit"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/edit_editDate"
+        android:layout_width="370dp"
+        android:layout_height="40dp"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:background="@drawable/rounded"
+        app:layout_constraintTop_toBottomOf="@id/edit_datetitle"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_edit"/>
+
+    <ImageView
+        android:id="@+id/edit_imageView"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:srcCompat="@drawable/blue_calendar_icon"
+        app:layout_constraintTop_toBottomOf="@id/edit_datetitle"
+        app:layout_constraintLeft_toLeftOf="@id/edit_editDate"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="335dp"
+        />
+    <TextView
+        android:id="@+id/edit_detailstitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detailtitle"
+        android:textColor="@color/blue"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/edit_editDate"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_edit"/>
+
+    <EditText
+        android:id="@+id/edit_multiline"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@id/edit_detailstitle"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_edit"/>
+
+    <CheckBox
+        android:id="@+id/edit_important"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:text="@string/important"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/edit_multiline"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_edit"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

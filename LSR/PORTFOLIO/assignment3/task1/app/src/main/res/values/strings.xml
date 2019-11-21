@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Movie Ticket Reservation</string>
+    <string name="date">DATE</string>
+    <string name="time">TIME</string>
+    <string name="adult">ADULTS</string>
+    <string name="kid">KIDS</string>
+    <string name="initial">0</string>
+    <string name="book">BOOK</string>
+    <string name="test">Test</string>
+    <string name="tickets">Tickets</string>
+    <string name="title">TITLE</string>
+    <string-array name="avengers">
+        <item>11:00am</item>
+        <item>2:00pm</item>
+        <item>4:00pm</item>
+        <item>7:30pm</item>
+    </string-array>
+
+    <string-array name="meters">
+        <item>11:30am</item>
+        <item>3:00pm</item>
+        <item>8:30pm</item>
+    </string-array>
+
+    <string-array name="spiderman">
+        <item>11:00am</item>
+        <item>12:00pm</item>
+        <item>4:00pm</item>
+        <item>8:30pm</item>
+    </string-array>
+
+    <string-array name="lionking">
+        <item>3:30pm</item>
+        <item>4:00pm</item>
+        <item>7:30pm</item>
+        <item>8:00pm</item>
+    </string-array>
+
+    <string-array name="hobbs">
+        <item>1:30pm</item>
+        <item>4:00pm</item>
+        <item>7:30pm</item>
+    </string-array>
+</resources>

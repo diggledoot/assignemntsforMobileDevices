@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/second_recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:textColor="@color/primary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/second_recycler_view" />
+
+
+    <EditText
+        android:id="@+id/editText_date"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/edit_round"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:inputType="date"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/textView_date" />
+
+    <ImageView
+        android:id="@+id/imageView_calender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="@id/editText_date"
+        app:layout_constraintTop_toBottomOf="@id/textView_date"
+        app:srcCompat="@drawable/calendar_icon" />
+
+    <TextView
+        android:id="@+id/textView_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:textColor="@color/primary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/editText_date" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner"
+        android:layout_width="215dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_round"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/textView_time" />
+
+    <TextView
+        android:id="@+id/textView_adult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/adult"
+        android:textColor="@color/primary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/spinner" />
+
+    <TextView
+        android:id="@+id/textView_numAdult"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_round"
+        android:gravity="center"
+        android:text="@string/initial"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/textView_adult"
+        app:layout_constraintTop_toBottomOf="@id/textView_adult" />
+
+    <ImageView
+        android:id="@+id/imageView_adult_down"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@id/textView_numAdult"
+        app:layout_constraintTop_toTopOf="@id/textView_numAdult"
+        app:srcCompat="@drawable/arrow_down" />
+
+    <ImageView
+        android:id="@+id/imageView_adult_up"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/textView_numAdult"
+        app:layout_constraintTop_toTopOf="@id/textView_numAdult"
+        app:srcCompat="@drawable/arrow_up" />
+
+
+    <TextView
+        android:id="@+id/textView_kid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/kid"
+        android:textColor="@color/primary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imageView_adult_up"
+        app:layout_constraintTop_toBottomOf="@id/spinner" />
+
+    <TextView
+        android:id="@+id/textView_numKid"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_round"
+        android:gravity="center"
+        android:text="@string/initial"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/textView_kid"
+        app:layout_constraintTop_toBottomOf="@id/textView_kid" />
+
+    <ImageView
+        android:id="@+id/imageView_kid_down"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@id/textView_numKid"
+        app:layout_constraintTop_toTopOf="@id/textView_numKid"
+        app:srcCompat="@drawable/arrow_down" />
+
+    <ImageView
+        android:id="@+id/imageView_kid_up"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/textView_numKid"
+        app:layout_constraintTop_toTopOf="@id/textView_numKid"
+        app:srcCompat="@drawable/arrow_up" />
+
+    <Button
+        android:id="@+id/button_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/book"
+        android:background="@color/maroon"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="468dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

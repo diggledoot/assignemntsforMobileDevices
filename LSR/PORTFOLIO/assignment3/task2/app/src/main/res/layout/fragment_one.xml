@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="358dp"
+        android:layout_height="71dp"
+        android:contentDescription="@string/titleImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/title" />
+
+    <ImageView
+        android:id="@+id/burger_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/burgerMainImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:srcCompat="@drawable/burger_main" />
+
+    <ImageView
+        android:id="@+id/ingredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/ingredientImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/burger_main"
+        app:srcCompat="@drawable/ingredient" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <ImageView
+        android:id="@+id/meat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/meatImage"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/ingredient"
+        app:srcCompat="@drawable/meat" />
+
+    <TextView
+        android:id="@+id/protein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/protein"
+        android:textColor="@color/font"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/meat"
+        app:layout_constraintTop_toTopOf="@id/meat" />
+
+    <LinearLayout
+        android:id="@+id/hori1"
+        android:layout_width="260dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="13dp"
+        android:background="@color/primary"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/protein"
+        app:layout_constraintTop_toTopOf="@id/protein" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/meat">
+
+        <RadioButton
+            android:id="@+id/beef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="@string/beef" />
+
+        <RadioButton
+            android:id="@+id/chicken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="@string/chicken" />
+
+        <RadioButton
+            android:id="@+id/fish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="@string/fish" />
+
+        <RadioButton
+            android:id="@+id/egg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="@string/egg" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/salad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/saladImage"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:srcCompat="@drawable/salad" />
+
+    <TextView
+        android:id="@+id/fiber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/fiber"
+        android:textColor="@color/font"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/salad"
+        app:layout_constraintTop_toTopOf="@id/salad" />
+
+    <LinearLayout
+        android:id="@+id/hori2"
+        android:layout_width="277dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="13dp"
+        android:background="@color/primary"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/fiber"
+        app:layout_constraintTop_toTopOf="@id/fiber" />
+
+    <CheckBox
+        android:id="@+id/lettuce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/lettuce"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/salad" />
+
+    <CheckBox
+        android:id="@+id/tomato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/tomato"
+        app:layout_constraintStart_toEndOf="@id/lettuce"
+        app:layout_constraintTop_toBottomOf="@id/salad" />
+
+    <CheckBox
+        android:id="@+id/pickle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/pickle"
+        app:layout_constraintStart_toEndOf="@id/tomato"
+        app:layout_constraintTop_toBottomOf="@id/salad" />
+
+    <CheckBox
+        android:id="@+id/onion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/onion"
+        app:layout_constraintStart_toEndOf="@id/pickle"
+        app:layout_constraintTop_toBottomOf="@id/salad" />
+
+    <LinearLayout
+        android:id="@+id/dot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dot"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/dot2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/dot_mute"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/dot1"
+        android:layout_marginStart="10dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="581dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

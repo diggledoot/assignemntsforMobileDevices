@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="addDetails">オールドコートハウス, じゃらんタン・アバン・ハジ・オープン, クチン,93000クチン,サラワク</string>
+    <string name="addTitle">住所</string>
+    <string name="ambience">雰囲気</string>
+    <string name="app_name">カフェレビュー</string>
+    <string name="clock">時計.png</string>
+    <string name="commons">"コモンズ "</string>
+    <string name="cuisine">料理：フュージョン</string>
+    <string name="drinks">飲み物</string>
+    <string name="food">食物</string>
+    <string name="img">コモンズ.png</string>
+    <string name="location">ロケーション.png</string>
+    <string name="openDetails">月曜 - 日曜日 | 午前10時 - 午後11時</string>
+    <string name="openTitle">営業時間</string>
+    <string name="review">レビュー</string>
+    <string name="service">サービス</string>
+</resources>

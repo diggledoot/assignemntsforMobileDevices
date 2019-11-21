@@ -1,0 +1,45 @@
+category:cybersecurity
+photo:cyber1.png
+title:The future of cybersecurity in a 5G-connected world
+website:https://www.techradar.com/sg/news/the-future-of-cybersecurity-in-a-5g-connected-world
+date:02-04-2019
+category:cybersecurity, mobile
+photo:cyber2.png
+title:Google discovered several iPhone security flaws, and Apple still hasn’t patched one
+website:https://www.theverge.com/2019/7/30/20746827/apple-ios-security-flaw-imessage-google-project-zero
+date:30-07-2019
+category:AI
+photo:ai4.png
+title:'I will destroy humans': Humanoid AI robot Sophia gets Saudi citizenship
+website:https://www.deccanchronicle.com/lifestyle/viral-and-trending/111117/i-will-destroy-humans-humanoid-ai-robot-sophia-gets-saudi-citizenship.html
+date:11-11-2017
+category:cybersecurity
+photo:cyber3.png
+title:WhatsApp and Telegram media files aren't so secure
+website:https://www.theverge.com/2019/7/15/20692184/whatsapp-telegram-media-files-android-messaging-encryption
+date:15-07-2019
+category:cybersecurity
+photo:cyber4.png
+title:Microsoft Exposes Russian Cyberattacks on Phones, Printers, Video Decoders
+website:https://www.technewsworld.com/story/Microsoft-Exposes-Russian-Cyberattacks-on-Phones-Printers-Video-Decoders-86171.html
+date:07-08-2019
+category:AI
+photo:ai1.png
+title:Scientists can now manipulate brain cells using smartphone
+website:https://www.sciencedaily.com/releases/2019/08/190805143525.htm
+date:05-08-2019
+category:AI
+photo:ai2.png
+title:Elon Musk plans 'Neuralink' to connect your brain to computers
+website:https://www.cnbc.com/2018/09/07/elon-musk-discusses-neurolink-on-joe-rogan-podcast.html
+date:07-09-2018
+category:AI
+photo:ai3.png
+title:Electronic chip mimics the brain to make memories in a flash
+website:https://www.sciencedaily.com/releases/2019/07/190716103408.htm
+date:16-07-2019
+category:cybersecurity, AI
+photo:cyber5.png
+title:These Chinese hackers tricked Tesla's Autopilot
+website:https://www.cnbc.com/2019/04/03/chinese-hackers-tricked-teslas-autopilot-into-switching-lanes.html
+date:03-04-2019

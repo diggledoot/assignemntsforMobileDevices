@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/commonsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/commons"
+        android:textColor="#2C2C2C"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/cuisineTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cuisine"
+        android:textColor="#A9A9A9"
+        android:textAlignment="center"
+        android:layout_marginBottom="4dp"/>
+
+    <ImageView
+        android:id="@+id/commonImageView"
+        android:layout_width="match_parent"
+        android:layout_height="183dp"
+        android:contentDescription="@string/commonsImg"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/commons" />
+    <LinearLayout
+        android:id="@+id/innerLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/addressTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/addressTitle"
+            android:textColor="#831B18"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:textSize="15sp"/>
+        <RelativeLayout
+            android:id="@+id/innerRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:contentDescription="@string/location_icon"
+                android:id="@+id/iconImageView"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                app:srcCompat="@drawable/location"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textColor="#831B18"
+                android:textSize="10sp"
+                android:layout_toEndOf="@id/iconImageView"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"/>
+
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/openingTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/openingTitle"
+            android:textStyle="bold"
+            android:textColor="#831B18"
+            android:layout_marginStart="10dp"
+            android:textSize="15sp"/>
+        <RelativeLayout
+            android:id="@+id/innerRelativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:contentDescription="@string/clock_icon"
+                android:id="@+id/clockImageView"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                app:srcCompat="@drawable/clock"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp" />
+            <TextView
+                android:id="@+id/opening"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:text="@string/opening"
+                android:textColor="#831B18"
+                android:textSize="10sp"
+                android:layout_toEndOf="@id/clockImageView"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TableRow
+        android:id="@+id/hr"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D3D3D3"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:id="@+id/reviewTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/review"
+        android:textStyle="bold"
+        android:textColor="#831B18"
+        android:textSize="15sp"
+        android:layout_marginStart="10dp"/>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:id="@+id/row1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/innerRelativeLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1">
+
+                <ImageView
+
+                    android:id="@+id/foodImageView"
+                    android:layout_width="15sp"
+                    android:layout_height="15sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/food_icon" />
+
+                <TextView
+                    android:id="@+id/foodTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/foodImageView"
+                    android:text="@string/food"
+                    android:textColor="#831B18"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/rating1ImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/foodTextView"
+                    android:layout_marginStart="35dp"
+                    app:srcCompat="@drawable/love3_icon" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/innerRelativeLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2">
+
+                <ImageView
+                    android:contentDescription="@string/drink_icon"
+                    android:id="@+id/drinkImageView"
+                    android:layout_width="15sp"
+                    android:layout_height="15sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/drinks_icon" />
+
+                <TextView
+                    android:id="@+id/drinkTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/drinkImageView"
+                    android:text="@string/drink"
+                    android:textColor="#831B18"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/rating2ImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/drinkImageView"
+                    android:layout_marginStart="35dp"
+                    app:srcCompat="@drawable/love4_icon" />
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/innerRelativeLayout5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1">
+
+                <ImageView
+                    android:id="@+id/serviceImageView"
+                    android:layout_width="15sp"
+                    android:layout_height="15sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/service_icon" />
+
+                <TextView
+                    android:id="@+id/serviceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toRightOf="@id/serviceImageView"
+                    android:text="@string/service"
+                    android:textColor="#831B18"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/rating3ImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/serviceTextView"
+                    android:layout_marginStart="35dp"
+                    app:srcCompat="@drawable/love5_icon" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/innerRelativeLayout6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2">
+
+                <ImageView
+                    android:id="@+id/ambienceImageView"
+                    android:layout_width="15sp"
+                    android:layout_height="15sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/ambience_icon" />
+
+                <TextView
+                    android:id="@+id/ambienceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toRightOf="@id/ambienceImageView"
+                    android:text="@string/ambience"
+                    android:textColor="#831B18"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/rating4ImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ambienceTextView"
+                    android:layout_marginStart="35dp"
+                    app:srcCompat="@drawable/love4_icon" />
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

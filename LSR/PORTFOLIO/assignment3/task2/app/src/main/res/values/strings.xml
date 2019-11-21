@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Assignment3Task2</string>
+    <string name="protein">Protein</string>
+    <string name="titleImage">title.png</string>
+    <string name="burgerMainImage">burger_main.png</string>
+    <string name="ingredientImage">ingredient.png</string>
+    <string name="meatImage">meat.png</string>
+    <string name="beef">beef</string>
+    <string name="chicken">chicken</string>
+    <string name="fish">fish</string>
+    <string name="egg">egg</string>
+    <string name="saladImage">salad.png</string>
+    <string name="fiber">Fiber</string>
+    <string name="lettuce">lettuce</string>
+    <string name="tomato">tomato</string>
+    <string name="pickle">pickle</string>
+    <string name="onion">onion</string>
+    <string-array name="fiber">
+        <item>lettuce</item>
+        <item>tomato</item>
+        <item>pickle</item>
+        <item>onion</item>
+    </string-array>
+    <string name="burger2Image">burger2.png</string>
+    <string name="juiceImage">juice.png</string>
+    <string name="yummyfat">Yummy Fat</string>
+    <string name="cheese2Image">cheese2.png</string>
+    <string name="cheese">Cheese</string>
+    <string name="mayo">Mayonaise</string>
+    <string name="mustard">Mustard</string>
+    <string name="size">Size</string>
+    <string name="yourorder">Your Order</string>
+    <string name="placeholder">beef with lettuce,pickle,onion top up with cheese,mustard, barbeque</string>
+    <string name="priceplaceholder">RM 0.00</string>
+    <string-array name="junk">
+        <item>cheese</item>
+        <item>mayo</item>
+        <item>mustard</item>
+    </string-array>
+    <string-array name="sizes">
+        <item>Small</item>
+        <item>Regular</item>
+        <item>Large</item>
+        <item>Gigantic</item>
+    </string-array>
+    <string name="burgerImage">burger.png</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

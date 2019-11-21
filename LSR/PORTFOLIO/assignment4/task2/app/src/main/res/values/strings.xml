@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Image Gallery</string>
+    <string-array name="pics">
+        <item>image1</item>
+        <item>image2</item>
+        <item>image3</item>
+        <item>image4</item>
+        <item>image5</item>
+        <item>image6</item>
+    </string-array>
+
+    <string-array name="links">
+        <item>http://10.0.2.2/task2/image1.png</item>
+        <item>http://10.0.2.2/task2/image2.png</item>
+        <item>http://10.0.2.2/task2/image3.png</item>
+        <item>http://10.0.2.2/task2/image4.png</item>
+        <item>http://10.0.2.2/task2/image5.png</item>
+        <item>http://10.0.2.2/task2/image6.png</item>
+    </string-array>
+</resources>

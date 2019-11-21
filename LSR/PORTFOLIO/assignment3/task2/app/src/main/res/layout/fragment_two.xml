@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentTwo">
+
+
+    <ImageView
+        android:id="@+id/burger2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/burger2Image"
+        android:src="@drawable/burger2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/juice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/juiceImage"
+        android:src="@drawable/juice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/burger2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="391dp" />
+
+    <ImageView
+        android:id="@+id/cheese2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/cheese2Image"
+        android:src="@drawable/cheese2"
+        app:layout_constraintStart_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/juice" />
+
+    <TextView
+        android:id="@+id/yummyfat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/yummyfat"
+        android:textColor="@color/font"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/cheese2"
+        app:layout_constraintTop_toTopOf="@id/cheese2" />
+
+    <LinearLayout
+        android:id="@+id/hori3"
+        android:layout_width="230dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="13dp"
+        android:background="@color/primary"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/yummyfat"
+        app:layout_constraintTop_toTopOf="@id/yummyfat" />
+
+    <CheckBox
+        android:id="@+id/cheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/cheese"
+        app:layout_constraintStart_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/cheese2" />
+
+    <CheckBox
+        android:id="@+id/mayo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/mayo"
+        app:layout_constraintStart_toEndOf="@id/cheese"
+        app:layout_constraintTop_toBottomOf="@id/cheese2" />
+
+    <CheckBox
+        android:id="@+id/mustard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/mustard"
+        app:layout_constraintStart_toEndOf="@id/mayo"
+        app:layout_constraintTop_toBottomOf="@id/cheese2" />
+
+    <LinearLayout
+        android:id="@+id/hori4"
+        android:layout_width="402dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="13dp"
+        android:background="@color/primary"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cheese" />
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/size"
+        android:textColor="@color/font"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/hori4" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/size"
+        app:layout_constraintTop_toBottomOf="@id/hori4" />
+
+    <TextView
+        android:id="@+id/yourorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/yourorder"
+        android:textColor="@color/primary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/hori4" />
+
+    <ImageView
+        android:id="@+id/burger"
+        android:contentDescription="@string/burgerImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/burger"
+        app:layout_constraintStart_toEndOf="@id/yourorder"
+        app:layout_constraintTop_toBottomOf="@id/hori4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="217dp" />
+
+    <TextView
+        android:id="@+id/summary"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:text="@string/placeholder"
+        android:textColor="@color/primary"
+        app:layout_constraintStart_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/burger" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="@color/price"
+        android:gravity="center"
+        android:text="@string/priceplaceholder"
+        android:textColor="@color/primary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/guideline5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="501dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="581dp" />
+
+    <LinearLayout
+        android:id="@+id/dot1F2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dot_mute"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/dot2F2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/dot"
+        app:layout_constraintBottom_toBottomOf="@id/guideline6"
+        app:layout_constraintStart_toEndOf="@id/dot1F2"
+        android:layout_marginStart="10dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
